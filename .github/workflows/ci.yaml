@@ -21,7 +21,7 @@ jobs:
       gitleaks_scan_passed: ${{ steps.gitleaks_scan.outcome }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install golangci-lint v2.1.5
         run: |
@@ -136,7 +136,7 @@ jobs:
     if: needs.SAST.result == 'success'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Go
         uses: actions/setup-go@v4
