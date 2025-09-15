@@ -1,0 +1,57 @@
+version: "2"
+
+run:
+  concurrency: 4
+  timeout: 1m
+  issues-exit-code: 1
+  tests: true
+
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+
+linters:
+  disable-all: false
+  fast: true
+  enable:
+    - dogsled
+    - errcheck
+    - funlen
+    - gocyclo
+    - govet
+    - gosec
+    - goconst
+    - gocritic
+    - ineffassign
+    - lll
+    - unconvert
+    - unparam
+    - unused
+    - staticcheck
+
+linters-settings:
+  gocritic:
+    disabled-checks:
+      - commentFormatting
+  funlen:
+    lines: 60
+    statements: 40
+  govet:
+    check-shadowing: true
+  gocyclo:
+    min-complexity: 10
+  dupl:
+    threshold: 100
+  goconst:
+    min-len: 2
+    min-occurrences: 3
+  lll:
+    line-length: 120
+    tab-width: 1
+
+issues:
+  exclude-rules:
+    - linters:
+        - gosec
+      text: "G601"

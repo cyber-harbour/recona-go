@@ -1,0 +1,150 @@
+name: Lint, SAST, Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  SAST:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    outputs:
+      lint_passed: ${{ steps.lint_check.outcome }}
+      dependency_scan_passed: ${{ steps.dependency_scan.outcome }}
+      trivy_scan_passed: ${{ steps.trivy_fs_scan.outcome }}
+      gitleaks_scan_passed: ${{ steps.gitleaks_scan.outcome }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install golangci-lint v2.1.5
+        run: |
+          mkdir -p $HOME/bin
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh \
+            | sh -s -- -b $HOME/bin v2.1.5
+          echo "$HOME/bin" >> $GITHUB_PATH
+
+      - name: Run golangci-lint (SARIF output)
+        id: lint_check
+        run: |
+          golangci-lint run --timeout=10m --output.sarif.path=golangci-lint.sarif ./... || true
+          if grep -q '"ruleId":' golangci-lint.sarif; then
+            echo "lint_failed=true" >> $GITHUB_ENV
+          else
+            echo "lint_failed=false" >> $GITHUB_ENV
+          fi
+
+      - name: Install OSV-Scanner
+        run: |
+          curl -L -o osv-scanner https://github.com/google/osv-scanner/releases/latest/download/osv-scanner_linux_amd64
+          chmod +x osv-scanner
+          sudo mv osv-scanner /usr/local/bin/
+
+      - name: Run OSV-Scanner (Dependency Vulnerability Scan)
+        id: dependency_scan
+        run: |
+          osv-scanner --format sarif --output osv-scanner.sarif --recursive . || true
+          if [ -f osv-scanner.sarif ] && grep -q '"ruleId":' osv-scanner.sarif; then
+            echo "vulnerabilities_found=true" >> $GITHUB_ENV
+          else
+            echo "vulnerabilities_found=false" >> $GITHUB_ENV
+          fi
+
+      - name: Install Trivy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget apt-transport-https gnupg lsb-release
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install -y trivy
+
+      - name: Generate dependency SBOM
+        run: |
+          trivy fs --format cyclonedx --output sbom.json .
+
+      - name: Run Trivy filesystem scan
+        id: trivy_fs_scan
+        run: |
+          trivy fs --format sarif --output trivy-fs.sarif . || true
+          if [ -f trivy-fs.sarif ] && grep -q '"ruleId":' trivy-fs.sarif; then
+            echo "trivy_issues_found=true" >> $GITHUB_ENV
+          else
+            echo "trivy_issues_found=false" >> $GITHUB_ENV
+          fi
+
+      - name: Install Gitleaks v8
+        run: |
+          GITLEAKS_VERSION=$(curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
+          wget -q https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz
+          tar -xzf gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz
+          chmod +x gitleaks
+          sudo mv gitleaks /usr/local/bin/
+          gitleaks version
+
+      - name: Run Gitleaks scan (SARIF)
+        id: gitleaks_scan
+        run: |
+          gitleaks detect --source . --report-format sarif --report-path gitleaks.sarif || true
+          # Create empty SARIF if no file was created
+          if [ ! -f gitleaks.sarif ]; then
+            echo '{"version":"2.1.0","runs":[{"tool":{"driver":{"name":"gitleaks"}},"results":[]}]}' > gitleaks.sarif
+          fi
+          if grep -q '"ruleId":' gitleaks.sarif; then
+            echo "secrets_found=true" >> $GITHUB_ENV
+          else
+            echo "secrets_found=false" >> $GITHUB_ENV
+          fi
+
+      - name: Upload SARIF artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sarif-reports
+          path: |
+            golangci-lint.sarif
+            osv-scanner.sarif
+            trivy-fs.sarif
+            gitleaks.sarif
+            sbom.json
+
+      - name: Fail if lint issues found
+        if: env.lint_failed == 'true'
+        run: exit 1
+
+      - name: Fail if dependencies vulnerabilities found
+        if: env.vulnerabilities_found == 'true'
+        run: exit 1
+
+      - name: Fail if secrets found by Gitleaks
+        if: env.secrets_found == 'true'
+        run: exit 1
+
+      - name: Fail if Trivy issues found
+        if: env.trivy_issues_found == 'true'
+        run: exit 1
+
+  test:
+    runs-on: ubuntu-latest
+    needs: SAST
+    if: needs.SAST.result == 'success'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.25.0"
+
+      - name: Install dependencies
+        run: go mod download
+
+      - name: Run Go tests
+        run: go test -v ./...
