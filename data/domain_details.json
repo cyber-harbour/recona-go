@@ -1,0 +1,459 @@
+{
+  "name": "google.com",
+  "updated_at": "2025-07-27T15:15:37.396793364Z",
+  "dns_records": {
+    "A": [
+      "216.58.214.174"
+    ],
+    "AAAA": [
+      "2a00:1450:4010:c0f::66",
+      "2a00:1450:4010:c0f::71",
+      "2a00:1450:4010:c0f::8a",
+      "2a00:1450:4010:c0f::64"
+    ],
+    "TXT": [
+      "docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e",
+      "google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o",
+      "facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95",
+      "v=spf1 include:_spf.google.com ~all",
+      "onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef",
+      "google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0"
+    ],
+    "NS": [
+      "ns2.google.com"
+    ],
+    "MX": [
+      "smtp.google.com"
+    ],
+    "SPF": [
+      {
+        "version": "spf1",
+        "mechanisms": [
+          {
+            "name": "include",
+            "qualifier": "+",
+            "value": "_spf.google.com"
+          },
+          {
+            "name": "all",
+            "qualifier": "~"
+          }
+        ],
+        "raw": "v=spf1 include:_spf.google.com ~all"
+      }
+    ],
+    "SOA": {
+      "ns": "ns1.google.com",
+      "email": "dns-admin.google.com",
+      "serial": 787417352,
+      "refresh": 900,
+      "retry": 900,
+      "expire": 1800,
+      "min_ttl": 60
+    },
+    "CAA": [
+      "0 issue \"pki.goog\""
+    ],
+    "updated_at": "2025-07-27T14:50:14.400725468Z"
+  },
+  "extract": {
+    "links": [
+      {
+        "anchor": "Gmail",
+        "attributes": {
+          "uri": {
+            "full_uri": "https://mail.google.com/mail/?tab=wm\u0026ogbl",
+            "host": "mail.google.com",
+            "path": "/mail/"
+          }
+        }
+      },
+      {
+        "anchor": "Images",
+        "attributes": {
+          "uri": {
+            "full_uri": "https://www.google.com/imghp?hl=en\u0026tab=wi\u0026ogbl",
+            "host": "www.google.com",
+            "path": "/imghp"
+          }
+        }
+      },
+      {
+        "attributes": {
+          "uri": {
+            "full_uri": "https://www.google.com/intl/en/about/products?tab=wh",
+            "host": "www.google.com",
+            "path": "/intl/en/about/products"
+          }
+        }
+      },
+      {
+        "anchor": "Sign in",
+        "attributes": {
+          "uri": {
+            "full_uri": "https://accounts.google.com/ServiceLogin?hl=en\u0026passive=true\u0026continue=https://www.google.com/%3Fgws_rd%3Dssl\u0026ec=GAZAAQ",
+            "host": "accounts.google.com",
+            "path": "/ServiceLogin"
+          }
+        }
+      },
+      {
+        "anchor": "Advanced search",
+        "attributes": {
+          "uri": {
+            "full_uri": "/advanced_search?hl=en\u0026authuser=0",
+            "path": "/advanced_search"
+          }
+        }
+      },
+      {
+        "anchor": "Advertising",
+        "attributes": {
+          "uri": {
+            "full_uri": "/intl/en/ads/",
+            "path": "/intl/en/ads/"
+          }
+        }
+      },
+      {
+        "anchor": "Business Solutions",
+        "attributes": {
+          "uri": {
+            "full_uri": "/services/",
+            "path": "/services/"
+          }
+        }
+      },
+      {
+        "anchor": "About Google",
+        "attributes": {
+          "uri": {
+            "full_uri": "/intl/en/about.html",
+            "path": "/intl/en/about.html"
+          }
+        }
+      },
+      {
+        "anchor": "Privacy",
+        "attributes": {
+          "uri": {
+            "full_uri": "/intl/en/policies/privacy/",
+            "path": "/intl/en/policies/privacy/"
+          }
+        }
+      },
+      {
+        "anchor": "Terms",
+        "attributes": {
+          "uri": {
+            "full_uri": "/intl/en/policies/terms/",
+            "path": "/intl/en/policies/terms/"
+          }
+        }
+      }
+    ],
+    "favicon_uri": {
+      "full_uri": "https://www.google.com/favicon.ico",
+      "host": "www.google.com",
+      "path": "/favicon.ico"
+    },
+    "favicon_sha256": "6da5620880159634213e197fafca1dde0272153be3e4590818533fab8d040770",
+    "meta_tags": [
+      {
+        "name": "description",
+        "value": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for."
+      },
+      {
+        "name": "robots",
+        "value": "noodp, "
+      }
+    ],
+    "description": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+    "status_code": 200,
+    "headers": [
+      {
+        "name": "date",
+        "value": "Mon, 21 Jul 2025 02:08:28 GMT"
+      },
+      {
+        "name": "expires",
+        "value": "-1"
+      },
+      {
+        "name": "cache-control",
+        "value": "private, max-age=0"
+      },
+      {
+        "name": "content-type",
+        "value": "text/html; charset=UTF-8"
+      },
+      {
+        "name": "content-security-policy-report-only",
+        "value": "object-src 'none';base-uri 'self';script-src 'nonce-e7cBSlhyFQV_AviWaZhclA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"
+      },
+      {
+        "name": "accept-ch",
+        "value": "Sec-CH-Prefers-Color-Scheme"
+      },
+      {
+        "name": "accept-ch",
+        "value": "Downlink"
+      },
+      {
+        "name": "accept-ch",
+        "value": "RTT"
+      },
+      {
+        "name": "permissions-policy",
+        "value": "unload=()"
+      },
+      {
+        "name": "p3p",
+        "value": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\""
+      },
+      {
+        "name": "server",
+        "value": "gws"
+      },
+      {
+        "name": "x-xss-protection",
+        "value": "0"
+      },
+      {
+        "name": "x-frame-options",
+        "value": "SAMEORIGIN"
+      },
+      {
+        "name": "set-cookie",
+        "value": "AEC=AVh_V2go6huqrXAsEy45tDknAsmVEO9B5jA5IiE9Bh5kHMzVi_Moye3JR8A; expires=Sat, 17-Jan-2026 02:08:28 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax"
+      },
+      {
+        "name": "set-cookie",
+        "value": "NID=525=IY-4g_1TVYaTd9Mq4QrOvZsMezHmkEoxbiPRMbpIfmXrfRyKJNbLZF1apKkr7yKzq83eBMTzUSRgPhZlSKQdBJjFXDeheoRpjzk8wqXdRInv50XIfYeOLYIFwBe2d2zCt-AU2TeBKSrq-jOxH4G-bvawTFmeA9IsZn5CrkEliQpR5VzGXaOx-NUHt7bHH2pvPsCIaD7SICJV4cOhc1-jBDM; expires=Tue, 20-Jan-2026 02:08:28 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none"
+      },
+      {
+        "name": "alt-svc",
+        "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+      },
+      {
+        "name": "accept-ranges",
+        "value": "none"
+      },
+      {
+        "name": "vary",
+        "value": "Accept-Encoding"
+      }
+    ],
+    "robots_txt": "HTTP/1.1 301 Moved Permanently\r\nLocation: https://www.google.com/robots.txt\r\nCross-Origin-Resource-Policy: cross-origin\r\nX-Content-Type-Options: nosniff\r\nServer: sffe\r\nContent-Length: 230\r\nX-XSS-Protection: 0\r\nDate: Mon, 21 Jul 2025 01:55:18 GMT\r\nExpires: Mon, 21 Jul 2025 02:25:18 GMT\r\nCache-Control: public, max-age=1800\r\nContent-Type: text/html; charset=UTF-8\r\nAge: 795\r\n\r\nHTTP/2 200 \r\naccept-ranges: bytes\r\nvary: Accept-Encoding\r\ncontent-type: text/plain\r\ncross-origin-resource-policy: cross-origin\r\ncross-origin-opener-policy-report-only: same-origin; report-to=\"static-on-bigtable\"\r\nreport-to: {\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}\r\ncontent-length: 7086\r\ndate: Mon, 21 Jul 2025 02:08:33 GMT\r\nexpires: Mon, 21 Jul 2025 02:08:33 GMT\r\ncache-control: private, max-age=0\r\nlast-modified: Wed, 25 Jun 2025 14:00:00 GMT\r\nx-content-type-options: nosniff\r\nserver: sffe\r\nx-xss-protection: 0\r\nalt-svc: h3=\":443\"",
+    "title": "Google",
+    "raw_response": "HTTP/1.1 301 Moved Permanently\r\nLocation: http://www.google.com/\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-6zlCZJvlsFZOwegwIAQLyw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp\r\nPermissions-Policy: unload=()\r\nDate: Mon, 21 Jul 2025 02:08:28 GMT\r\nExpires: Wed, 20 Aug 2025 02:08:28 GMT\r\nCache-Control: public, max-age=2592000\r\nServer: gws\r\nContent-Length: 219\r\nX-XSS-Protection: 0\r\nX-Frame-Options: SAMEORIGIN\r\n\r\nHTTP/1.1 302 Found\r\nLocation: https://www.google.com/?gws_rd=ssl\r\nCache-Control: private\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-ItmnZLyVmEhApZuqXlYFnQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp\r\nPermissions-Policy: unload=()\r\nDate: Mon, 21 Jul 2025 02:08:28 GMT\r\nServer: gws\r\nContent-Length: 231\r\nX-XSS-Protection: 0\r\nX-Frame-Options: SAMEORIGIN\r\nSet-Cookie: AEC=AVh_V2iRuKTEF_x-T8rssmNUFGcRfoBqpJqjCL9uu0XN_280V7hq8szQZQ; expires=Sat, 17-Jan-2026 02:08:28 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax\r\n\r\nHTTP/2 200 \r\ndate: Mon, 21 Jul 2025 02:08:28 GMT\r\nexpires: -1\r\ncache-control: private, max-age=0\r\ncontent-type: text/html; charset=UTF-8\r\ncontent-security-policy-report-only: object-src 'none';base-uri 'self';script-src 'nonce-e7cBSlhyFQV_AviWaZhclA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp\r\naccept-ch: Sec-CH-Prefers-Color-Scheme\r\naccept-ch: Downlink\r\naccept-ch: RTT\r\npermissions-policy: unload=()\r\np3p: CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"\r\nserver: gws\r\nx-xss-protection: 0\r\nx-frame-options: SAMEORIGIN\r\nset-cookie: AEC=AVh_V2go6huqrXAsEy45tDknAsmVEO9B5jA5IiE9Bh5kHMzVi_Moye3JR8A; expires=Sat, 17-Jan-2026 02:08:28 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax\r\nset-cookie: NID=525=IY-4g_1TVYaTd9Mq4QrOvZsMezHmkEoxbiPRMbpIfmXrfRyKJNbLZF1apKkr7yKzq83eBMTzUSRgPhZlSKQdBJjFXDeheoRpjzk8wqXdRInv50XIfYeOLYIFwBe2d2zCt-AU2TeBKSrq-jOxH4G-bvawTFmeA9IsZn5CrkEliQpR5VzGXaOx-NUHt7bHH2pvPsCIaD7SICJV4cOhc1-jBDM; expires=Tue, 20-Jan-2026 02:08:28 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none\r\nalt-svc: h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000\r\naccept-ranges: none\r\nvary: Accept-Encoding\r\n\r\n\u003c!doctype html\u003e\u003chtml itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\"\u003e\u003chead\u003e\u003cmeta content=\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\" name=\"description\"\u003e\u003cmeta content=\"noodp, \" name=\"robots\"\u003e\u003cmeta content=\"text/html; charset=UTF-8\" http-equiv=\"Content-Type\"\u003e\u003cmeta content=\"/images/branding/googleg/1x/googleg_standard_color_128dp.png\" itemprop=\"image\"\u003e\u003ctitle\u003eGoogle\u003c/title\u003e\u003cscript nonce=\"e7cBSlhyFQV_AviWaZhclA\"\u003e(function(){var _g={kEI:'HKF9aM24Ks2GptQPudCaoAQ',kEXPI:'0,18168,184623,63,2,3497467,626,435,538661,14111,64702,360901,290044,5241682,460,11,36812171,25228681,51196,5,72787,14280,14115,11942,50565,2664,3430,3319,23879,9138,4600,328,6225,63455,710,15048,8211,3286,4134,30380,28333,48904,5309,352,4100,910,2,1,6,13861,5870,7707,7,5774,1202,12281,3311,10817,4719,11805,2801,1,459,4319,2126,2863,1,5970,4650,2360,459,9288,5683,1,3604,1083,4574,1,8146,3960,7,1,1514,1209,6,6431,753,6617,2101,649,4222,1,4,4532,269,945,3,1470,3858,1724,29,3618,1221,1,3459,2,82,1216,549,1874,957,891,600,1033,655,284,6,634,3286,1571,983,4,6024,2732,676,1970,98,4,6,320,5103,249,418,34,2225,81,6,36,2147,559,1,8,1,1958,3175,1446,3,2,2,2,812,519,855,4,3168,283,611,4,106,340,1132,2,1,308,1,2,311,1,42,851,2713,519,172,3533,1027,2654,195,213,1281,54,351,185,1,2,1380,31,42,20,1439,2,430,281,72,582,1,1,304,285,537,520,125,2001,41,676,551,250,174,1017,6,112,2,760,19,4,498,66,4,1,2,372,309,44,83,50,179,81,327,107,212,3,693,17,4,6,1,428,6,11,964,304,2,10,6,989,2,286,703,720,194,1977,605,53,1085,89,140,250,2,2,9,1811,886,544,2,240,4,336,1132,2,655,7,4,133,7,281,619,178,113,2,1,3,97,18,34,75,20,449,6,843,2,32,488,492,1,927,354,1,1,101,60,4,1,6,20,216,3,6,1254,85,66,578,1616,3,3,15,364,474,11,9,21,20,1048,2065,13,713,2394,835,58,228,445,79,427,940,4,3,1007,3,2,2,2,770,107,59,1,2,2,3,2,2,2,102,25,1,129,445,24,4,4,379,634,75,164,86,123,286,117,439,118,681,262,38,2,7,100,79,143,356,531,73,129,447,494,478,2756,21202496,1717,7635,5,2992,4,2434,266,260,3,1307,3026,15,4143,2,1813,2190,3,1557,374,60,41,1249,907,607,15,538,2,669,199,444,667,8489725,1863409',kBL:'Nta1',kOPI:89978449};(function(){var a;((a=window.google)==null?0:a.stvsc)?google.kEI=_g.kEI:window.google=_g;}).call(this);})();(function(){google.sn='webhp';google.kHL='en';})();(function(){\nvar g=this||self;function k(){return window.google\u0026\u0026window.google.kOPI||null};var l,m=[];function n(a)...\\x3dxjs.hp.en.NGiskDeWRrc.es5.O/ck\\x3dxjs.hp.LV-KAMp5Qo0.L.B1.O/am\\x3dBAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCEgQAAAACYoAAAAAAAEAIAAAAAACAAAGAFAACBAAAEBAgAACgAmGQA40AAgAABsAIBkAOUHgAAAAASBACJAAAwACAAAAAgAQAwAACAgBMAAACAARAeBgQAAAAAABAACwoCAAAAAABAPAI/d\\x3d1/ed\\x3d1/dg\\x3d0/br\\x3d1/ujg\\x3d1/rs\\x3dACT90oG9yWKU5y-8sFb5qzm3nYNAqUuf9g',basecss:'/xjs/_/ss/k\\x3dxjs.hp.LV-KAMp5Qo0.L.B1.O/am\\x3dBAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCEgQAAAAAYoAAAAAAAAAAAAAAAACAAAEAFAACBAAAEBAgAACgAmAQAAwAAAAABsAIBkAOUHgAAAAASBACJAAAwACAAAAAgAQAwAACAgBEAAAAAAAAEAAAAAAAAABAAAQo/br\\x3d1/rs\\x3dACT90oF2wa1EfDVJFr7VXIQG0_oPrfJZWA',basejs:'/xjs/_/js/k\\x3dxjs.hp.en.NGiskDeWRrc.es5.O/am\\x3dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAEAIAAAAAAAAAACAEAACBAAAAAAAAACAAAGAA4EAAgAAAAAAAgAMAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAMAAACAARAeBgQAAAAAABAACwICAAAAAABAPAI/dg\\x3d0/br\\x3d1/rs\\x3dACT90oEWxvhVvTcKIxc9SJrB1Lhd6y07aw',excm:[]};})();(function(){var u='/xjs/_/js/k\\x3dxjs.hp.en.NGiskDeWRrc.es5.O/am\\x3dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAEAIAAAAAAAAAACAEAACBAAAAAAAAACAAAGAA4EAAgAAAAAAAgAMAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAMAAACAARAeBgQAAAAAABAACwoCAAAAAABAPAI/d\\x3d1/ed\\x3d1/dg\\x3d3/br\\x3d1/rs\\x3dACT90oFTUXRMFFlwK3CdB68RkZNyRfnrzw/m\\x3dsb_he,d';var st=1;var amd=1000;var mmd=0;var pod=true;var pop=true;var povp=false;var fp='';\nvar e=this||self;function f(){var b,a,d;if(a=b=(a=window.google)==null?void 0:(d=a.ia)==null?void 0:d.r.B2Jtyd)a=b.m,a=a===1||a===5;return a\u0026\u0026b.cbfd!=null\u0026\u0026b.cbvi!=null?b:void 0};function g(){var b=[u];if(!google.dp){for(var a=0;a\u003cb.length;a++){var d=b[a],c=document.createElement(\"link\");c.as=\"script\";c.href=d;c.rel=\"preload\";document.body.appendChild(c)}google.dp=!0}};google.ps===void 0\u0026\u0026(google.ps=[]);function h(){var b=u,a=function(){};google.lx=google.stvsc?a:function(){k(b);google.lx=a};google.bx||google.lx()}function l(b,a){a\u0026\u0026(b.src=a);fp\u0026\u0026google.caft\u0026\u0026google.caft(function(){b.fetchPriority=fp});var d=b.onload;b.onload=function(c){d\u0026\u0026d(c);google.ps=google.ps.filter(function(G){return b!==G})};google.ps.push(b);document.body.appendChild(b)}google.as=l;function k(b){google.timers\u0026\u0026google.timers.load\u0026\u0026google.tick\u0026\u0026google.tick(\"load\",\"xjsls\");var a=document.createElement(\"script\");a.onerror=function(){google.ple=1};a.onload=function(){google.ple=0};google.xjsus=void 0;l(a,b);google.aple=-1;google.dp=!0};function m(b){var a=b.getAttribute(\"jscontroller\");return(a===\"UBXHI\"||a===\"R3fhkb\"||a===\"TSZEqd\")\u0026\u0026b.hasAttribute(\"data-src\")}function n(){for(var b=document.getElementsByTagName(\"img\"),a=0,d=b.length;a\u003cd;a++){var c=b[a];if(c.hasAttribute(\"data-lzy_\")\u0026\u0026Number(c.getAttribute(\"data-atf\"))\u00261\u0026\u0026!m(c))return!0}return!1}for(var p=document.getElementsByTagName(\"img\"),q=0,r=p.length;q\u003cr;++q){var t=p[q];Number(t.getAttribute(\"data-atf\"))\u00261\u0026\u0026m(t)\u0026\u0026(t.src=t.getAttribute(\"data-src\"))};var w,x,y,z,A,B,C,D,E,F;function H(){google.xjsu=u;e._F_jsUrl=u;A=function(){h()};w=!1;x=(st===1||st===3)\u0026\u0026!!google.caft\u0026\u0026!n();y=f();z=(st===2||st===3)\u0026\u0026!!y\u0026\u0026!n();B=pod;C=pop;D=povp;E=pop\u0026\u0026document.prerendering||povp\u0026\u0026document.hidden;F=D?\"visibilitychange\":\"prerenderingchange\"}function I(){w||x||z||E||(A(),w=!0)}\nsetTimeout(function(){google\u0026\u0026google.tick\u0026\u0026google.timers\u0026\u0026google.timers.load\u0026\u0026google.tick(\"load\",\"xjspls\");H();if(x||z||E){if(x){var b=function(){x=!1;I()};google.caft(b);window.setTimeout(b,amd)}z\u0026\u0026(b=function(){z=!1;I()},y.cbvi.push(b),window.setTimeout(b,mmd));if(E){var a=function(){(D?document.hidden:document.prerendering)||(E=!1,I(),document.removeEventListener(F,a))};document.addEventListener(F,a,{passive:!0})}if(B||C||D)w||g()}else A()},0);})();window._ = window._ || {};window._DumpException = _._DumpException = function(e){throw e;};window._s = window._s || {};_s._DumpException = _._DumpException;window._qs = window._qs || {};_qs._DumpException = _._DumpException;(function(){var t=[4,65536,0,0,0,0,0,556269568,145,42098688,512,33792,262144,192,268435550,687865889,24079,442515872,739127302,4202500,268501680,8081422,553648132,574755076,3145728,128,4608,603979788,4994,268828672,4219361,0,184553472,2088,0,53008];window._F_toggles = window._xjs_toggles = t;})();window._F_installCss = window._F_installCss || function(css){};(function(){google.jl={bfl:0,dw:false,eli:false,ine:false,ubm:false,uwp:true,vs:false};})();(function(){var pmc='{\\x22d\\x22:{},\\x22sb_he\\x22:{\\x22client\\x22:\\x22heirloom-hp\\x22,\\x22dh\\x22:true,\\x22ds\\x22:\\x22\\x22,\\x22host\\x22:\\x22google.com\\x22,\\x22jsonp\\x22:true,\\x22msgs\\x22:{\\x22cibl\\x22:\\x22Clear Search\\x22,\\x22dym\\x22:\\x22Did you mean:\\x22,\\x22lcky\\x22:\\x22I\\\\u0026#39;m Feeling Lucky\\x22,\\x22lml\\x22:\\x22Learn more\\x22,\\x22psrc\\x22:\\x22This search was removed from your \\\\u003Ca href\\x3d\\\\\\x22/history\\\\\\x22\\\\u003EWeb History\\\\u003C/a\\\\u003E\\x22,\\x22psrl\\x22:\\x22Remove\\x22,\\x22sbit\\x22:\\x22Search by image\\x22,\\x22srch\\x22:\\x22Google Search\\x22},\\x22ovr\\x22:{},\\x22pq\\x22:\\x22\\x22,\\x22rfs\\x22:[],\\x22stok\\x22:\\x22OT_rEvF7odh3Uk6px5j9AzG_cvM\\x22}}';google.pmc=JSON.parse(pmc);})();\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e",
+    "external_redirect_uri": {
+      "full_uri": "https://www.google.com/?gws_rd=ssl",
+      "host": "www.google.com",
+      "path": "/"
+    },
+    "extracted_at": "2025-07-24T10:06:51.661488602Z",
+    "cookies": [
+      {
+        "key": "AEC",
+        "Value": "AVh_V2go6huqrXAsEy45tDknAsmVEO9B5jA5IiE9Bh5kHMzVi_Moye3JR8A",
+        "expire": "2026-01-17T02:08:28Z",
+        "path": "/",
+        "http_only": true,
+        "security": true
+      },
+      {
+        "key": "NID",
+        "Value": "525=IY-4g_1TVYaTd9Mq4QrOvZsMezHmkEoxbiPRMbpIfmXrfRyKJNbLZF1apKkr7yKzq83eBMTzUSRgPhZlSKQdBJjFXDeheoRpjzk8wqXdRInv50XIfYeOLYIFwBe2d2zCt-AU2TeBKSrq-jOxH4G-bvawTFmeA9IsZn5CrkEliQpR5VzGXaOx-NUHt7bHH2pvPsCIaD7SICJV4cOhc1-jBDM",
+        "expire": "2026-01-20T02:08:28Z",
+        "path": "/",
+        "http_only": true,
+        "security": true
+      }
+    ]
+  },
+  "certificate_summaries": {
+    "fingerprint_sha256": "f700c97434575ebe70a70ed29ba82d44f1ce1455c3d9063f836895a1c6b57f26",
+    "issuer_dn": {
+      "raw": "C=US, O=Google Trust Services, CN=WR2",
+      "C": "US",
+      "CN": "WR2",
+      "O": "Google Trust Services"
+    },
+    "subject_dn": {
+      "raw": "CN=*.google.com",
+      "CN": "*.google.com"
+    },
+    "tls_version": "TLSv1.2",
+    "validity_end": "2025-09-29T08:34:02Z",
+    "dns_names": [
+      "*.google.com",
+      "*.appengine.google.com",
+      "*.bdn.dev",
+      "*.origin-test.bdn.dev",
+      "*.cloud.google.com",
+      "*.crowdsource.google.com",
+      "*.datacompute.google.com",
+      "*.google.ca",
+      "*.google.cl",
+      "*.google.co.in",
+      "*.google.co.jp",
+      "*.google.co.uk",
+      "*.google.com.ar",
+      "*.google.com.au",
+      "*.google.com.br",
+      "*.google.com.co",
+      "*.google.com.mx",
+      "*.google.com.tr",
+      "*.google.com.vn",
+      "*.google.de",
+      "*.google.es",
+      "*.google.fr",
+      "*.google.hu",
+      "*.google.it",
+      "*.google.nl",
+      "*.google.pl",
+      "*.google.pt",
+      "*.googleapis.cn",
+      "*.googlevideo.com",
+      "*.gstatic.cn",
+      "*.gstatic-cn.com",
+      "googlecnapps.cn",
+      "*.googlecnapps.cn",
+      "googleapps-cn.com",
+      "*.googleapps-cn.com",
+      "gkecnapps.cn",
+      "*.gkecnapps.cn",
+      "googledownloads.cn",
+      "*.googledownloads.cn",
+      "recaptcha.net.cn",
+      "*.recaptcha.net.cn",
+      "recaptcha-cn.net",
+      "*.recaptcha-cn.net",
+      "widevine.cn",
+      "*.widevine.cn",
+      "ampproject.org.cn",
+      "*.ampproject.org.cn",
+      "ampproject.net.cn",
+      "*.ampproject.net.cn",
+      "google-analytics-cn.com",
+      "*.google-analytics-cn.com",
+      "googleadservices-cn.com",
+      "*.googleadservices-cn.com",
+      "googlevads-cn.com",
+      "*.googlevads-cn.com",
+      "googleapis-cn.com",
+      "*.googleapis-cn.com",
+      "googleoptimize-cn.com",
+      "*.googleoptimize-cn.com",
+      "doubleclick-cn.net",
+      "*.doubleclick-cn.net",
+      "*.fls.doubleclick-cn.net",
+      "*.g.doubleclick-cn.net",
+      "doubleclick.cn",
+      "*.doubleclick.cn",
+      "*.fls.doubleclick.cn",
+      "*.g.doubleclick.cn",
+      "dartsearch-cn.net",
+      "*.dartsearch-cn.net",
+      "googletraveladservices-cn.com",
+      "*.googletraveladservices-cn.com",
+      "googletagservices-cn.com",
+      "*.googletagservices-cn.com",
+      "googletagmanager-cn.com",
+      "*.googletagmanager-cn.com",
+      "googlesyndication-cn.com",
+      "*.googlesyndication-cn.com",
+      "*.safeframe.googlesyndication-cn.com",
+      "app-measurement-cn.com",
+      "*.app-measurement-cn.com",
+      "gvt1-cn.com",
+      "*.gvt1-cn.com",
+      "gvt2-cn.com",
+      "*.gvt2-cn.com",
+      "2mdn-cn.net",
+      "*.2mdn-cn.net",
+      "googleflights-cn.net",
+      "*.googleflights-cn.net",
+      "admob-cn.com",
+      "*.admob-cn.com",
+      "googlesandbox-cn.com",
+      "*.googlesandbox-cn.com",
+      "*.safenup.googlesandbox-cn.com",
+      "*.gstatic.com",
+      "*.metric.gstatic.com",
+      "*.gvt1.com",
+      "*.gcpcdn.gvt1.com",
+      "*.gvt2.com",
+      "*.gcp.gvt2.com",
+      "*.url.google.com",
+      "*.youtube-nocookie.com",
+      "*.ytimg.com",
+      "ai.android",
+      "android.com",
+      "*.android.com",
+      "*.flash.android.com",
+      "g.cn",
+      "*.g.cn",
+      "g.co",
+      "*.g.co",
+      "goo.gl",
+      "www.goo.gl",
+      "google-analytics.com",
+      "*.google-analytics.com",
+      "google.com",
+      "googlecommerce.com",
+      "*.googlecommerce.com",
+      "ggpht.cn",
+      "*.ggpht.cn",
+      "urchin.com",
+      "*.urchin.com",
+      "youtu.be",
+      "youtube.com",
+      "*.youtube.com",
+      "music.youtube.com",
+      "*.music.youtube.com",
+      "youtubeeducation.com",
+      "*.youtubeeducation.com",
+      "youtubekids.com",
+      "*.youtubekids.com",
+      "yt.be",
+      "*.yt.be",
+      "android.clients.google.com",
+      "*.android.google.cn",
+      "*.chrome.google.cn",
+      "*.developers.google.cn",
+      "*.aistudio.google.com"
+    ],
+    "updated_at": "2025-07-27T13:34:57.427032167Z"
+  },
+  "is_ns": true,
+  "is_mx": true,
+  "is_ptr": true,
+  "is_cname": true,
+  "suffix": "com",
+  "name_full_reverse": "moc.elgoog",
+  "name_without_tld": "google",
+  "technologies": [
+    {
+      "name": "Google Web Server"
+    }
+  ],
+  "severity_details": {},
+  "geo": [
+    {
+      "city_name": "Riverton",
+      "country": "United States",
+      "country_iso_code": "us",
+      "ip": "216.58.214.174"
+    }
+  ],
+  "isp": [
+    {
+      "as_num": 15169,
+      "as_org": "GOOGLE",
+      "ip": "216.58.214.174",
+      "network": "216.58.214.0/23"
+    }
+  ]
+}

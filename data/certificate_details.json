@@ -1,0 +1,129 @@
+{
+  "parsed": {
+    "extensions": {
+      "authority_info_access": {
+        "issuer_urls": [
+          "http://crt.sectigo.com/SectigoRSADomainValidationSecureServerCA.crt"
+        ]
+      },
+      "authority_key_id": "8d8c5ec454ad8ae177e99bf99b05e1b8018d61e1",
+      "basic_constraints": {},
+      "certificate_policies": [
+        {
+          "cps": [
+            "https://sectigo.com/CPS"
+          ],
+          "id": "1.3.6.1.4.1.6449.1.2.2.7"
+        },
+        {
+          "id": "2.23.140.1.2.1"
+        }
+      ],
+      "extended_key_usage": {
+        "client_auth": true,
+        "server_auth": true
+      },
+      "key_usage": {
+        "digital_signature": true,
+        "key_encipherment": true,
+        "value": 5
+      },
+      "signed_certificate_timestamps": [
+        {
+          "log_id": "3dzKNJXX4RYF55Uy+sef+D0cUN/bADoUEnYKLKy7yCo=",
+          "signature": "BAMARzBFAiEA+aiCrUviFEixjbrAVFTi/sjfix3bAmCIenIsAQPv9DwCICYq/GkWpp5K5k9Mhwekel8SHbBY4O9r78xnoEaeFXFG",
+          "timestamp": 1729734861
+        },
+        {
+          "log_id": "zPsPaoVxCWX+lZtTzumyfCLphVwNl422qX5UwP5MDbA=",
+          "signature": "BAMARjBEAiA9rKxyeT9lo8UJLJU/qJmuBgpMhZ9J1WC4IJ6Br6zvmwIgO4C8pC27RndUwWVNJ/8zLSAVbd3Rc6gkHZSYCTuYPGI=",
+          "timestamp": 1729734861
+        },
+        {
+          "log_id": "EvFONL1TckyEBhnDjz96E/jntWKHiJxtMAWE6+WGJjo=",
+          "signature": "BAMARzBFAiEA4B9HDDDGn7RABVpXOaTG6TWa5gCQT/97hJJpWrOYqIUCIBI2+CpqjWsyLaB6seNWrbx9VCvbpRIMUga18z5k7Szg",
+          "timestamp": 1729734861
+        }
+      ],
+      "subject_alt_name": {
+        "dns_names": [
+          "chayouhui.net",
+          "www.chayouhui.net"
+        ],
+        "dns_names_v2": [
+          "chayouhui.net",
+          "www.chayouhui.net"
+        ]
+      },
+      "subject_key_id": "5ae611094a7517b03df161586446325965850f2d"
+    },
+    "fingerprint_md5": "a18d94fcec5849b99195c6a5adaaf6ff",
+    "fingerprint_sha1": "e9d9ae99182946a84dedfe50aaecb52efb401057",
+    "fingerprint_sha256": "00000ffbd6a720c225b74189edc90ec0e517551a01310c2e126b8081982f526c",
+    "issuer": {
+      "common_name": [
+        "Sectigo RSA Domain Validation Secure Server CA"
+      ],
+      "country": [
+        "GB"
+      ],
+      "locality": [
+        "Salford"
+      ],
+      "organization": [
+        "Sectigo Limited"
+      ],
+      "province": [
+        "Greater Manchester"
+      ]
+    },
+    "issuer_dn": "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Domain Validation Secure Server CA",
+    "names": [
+      "chayouhui.net",
+      "www.chayouhui.net"
+    ],
+    "serial_number": "245176972922589940283932287635025662225",
+    "signature": {
+      "signature_algorithm": {
+        "name": "SHA256-RSA",
+        "oid": "1.2.840.113549.1.1.11"
+      },
+      "value": "ymwnThQBf8MK6GiJ7blzkwSM9ou4aih9pb5bx3zEHY9Qappv8jAZAKn3VHIAIJIYLTsW+moEkq0NLlIMa6c0TxE7ZB4ScJfV9MjPhe9awukJhyBSBMH2wTMKsY7wPv2oBt5WtkGIKmKgSesmK7B+mNl0hqDrVLN4zNsTUkyDGw0HCCe7VPoGV1mn9NVHG6yd2mF2tOtZsJK8E2Zwi+UtdxDN2KYyDsovv22hQGZHgQb+sG0CyvE5tXI2nM4LSDr6r5m9dUWqCXEQ+hH/mfaYMetfHrhjhOV54KfMGWbE5zsBLh4s43qxk6G4HiasjxtdNIX1xgtiFwugUx43m3VWUw=="
+    },
+    "signature_algorithm": {
+      "name": "SHA256-RSA",
+      "oid": "1.2.840.113549.1.1.11"
+    },
+    "spki_subject_fingerprint": "2e342fba585f8402ea112bcea9cb899f4c2b2f3b8549b1b1d9b7416ebdec83a1",
+    "subject": {
+      "common_name": [
+        "chayouhui.net"
+      ],
+      "common_name_lowercase": [
+        "chayouhui.net"
+      ]
+    },
+    "subject_dn": "CN=chayouhui.net",
+    "subject_key_info": {
+      "fingerprint_sha256": "4b1cc08c07412b8aa15386af1020a03c6483fa48fb56af53cb88ef201ad9e75d",
+      "key_algorithm": {
+        "name": "RSA"
+      }
+    },
+    "tbs_fingerprint": "575dd1d27b1747a13bf793cad277452653ae73e9e337949c16c2fa669f8f77cd",
+    "tbs_noct_fingerprint": "d92d22fa4aaacb7029a0ac6272e5f5f05f7a1966e78486e7120ef84039e43d83",
+    "validation_level": "DV",
+    "validity": {
+      "end": "2025-10-24T23:59:59Z",
+      "length": 31622399,
+      "start": "2024-10-24T00:00:00Z"
+    },
+    "version": 3
+  },
+  "raw": "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",
+  "fingerprint_sha256": "00000ffbd6a720c225b74189edc90ec0e517551a01310c2e126b8081982f526c",
+  "updated_at": "2025-04-24T05:22:41.300438055Z",
+  "validation": {
+    "valid": true
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "CVE-1999-0199",
+  "status": "Modified",
+  "has_poc": true,
+  "has_epss": true,
+  "has_cvss": true,
+  "has_targets": false,
+  "is_kev_listed": false,
+  "tags": null,
+  "description": "manual/search.texi in the GNU C Library (aka glibc) before 2.2 lacks a statement about the unspecified tdelete return value upon deletion of a tree's root, which might allow attackers to access a dangling pointer in an application whose developer was unaware of a documentation update from 1999.",
+  "references": [
+    {
+      "source": "cve@mitre.org",
+      "tags": [
+        "Product",
+        "Vendor Advisory"
+      ],
+      "url": "https://ftp.gnu.org/gnu/glibc/glibc-2.2.tar.gz"
+    },
+    {
+      "source": "cve@mitre.org",
+      "tags": [
+        "Patch",
+        "Third Party Advisory"
+      ],
+      "url": "https://github.com/bminor/glibc/commit/2864e767053317538feafa815046fff89e5a16be#diff-94e8c502f255fdfc346df0e29fd4ef40"
+    },
+    {
+      "source": "cve@mitre.org",
+      "tags": [
+        "Exploit",
+        "Third Party Advisory"
+      ],
+      "url": "https://www.cee.studio/tdelete.html"
+    },
+    {
+      "source": "af854a3a-2127-422b-91ae-364da2661108",
+      "tags": [
+        "Product",
+        "Vendor Advisory"
+      ],
+      "url": "https://ftp.gnu.org/gnu/glibc/glibc-2.2.tar.gz"
+    },
+    {
+      "source": "af854a3a-2127-422b-91ae-364da2661108",
+      "tags": [
+        "Patch",
+        "Third Party Advisory"
+      ],
+      "url": "https://github.com/bminor/glibc/commit/2864e767053317538feafa815046fff89e5a16be#diff-94e8c502f255fdfc346df0e29fd4ef40"
+    },
+    {
+      "source": "af854a3a-2127-422b-91ae-364da2661108",
+      "tags": [
+        "Exploit",
+        "Third Party Advisory"
+      ],
+      "url": "https://www.cee.studio/tdelete.html"
+    }
+  ],
+  "kev": null,
+  "cvss": {
+    "score": 9.8,
+    "severity": "CRITICAL",
+    "metrics": {
+      "v2": [
+        {
+          "ac_insuf_info": false,
+          "base_severity": "HIGH",
+          "cvss_data": {
+            "access_complexity": "LOW",
+            "access_vector": "NETWORK",
+            "authentication": "NONE",
+            "availability_impact": "PARTIAL",
+            "base_score": 7.5,
+            "confidentiality_impact": "PARTIAL",
+            "integrity_impact": "PARTIAL",
+            "vector_string": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "exploitability_score": 10,
+          "impact_score": 6.4,
+          "obtain_all_privilege": false,
+          "obtain_other_privilege": false,
+          "obtain_user_privilege": false,
+          "source": "nvd@nist.gov",
+          "type": "Primary",
+          "user_interaction_required": false
+        }
+      ],
+      "v3_1": [
+        {
+          "cvss_data": {
+            "attack_complexity": "LOW",
+            "attack_vector": "NETWORK",
+            "availability_impact": "HIGH",
+            "base_score": 9.8,
+            "base_severity": "CRITICAL",
+            "confidentiality_impact": "HIGH",
+            "integrity_impact": "HIGH",
+            "privileges_required": "NONE",
+            "scope": "UNCHANGED",
+            "user_interaction": "NONE",
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "exploitability_score": 3.9,
+          "impact_score": 5.9,
+          "source": "nvd@nist.gov",
+          "type": "Primary"
+        }
+      ]
+    }
+  },
+  "epss": {
+    "score": 0.00677,
+    "percentile": 0.70605,
+    "date": "2025-07-16T12:55:00Z"
+  },
+  "poc": {
+    "references": [
+      "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0199)",
+      "https://github.com/u91738/cvematch"
+    ]
+  },
+  "cwes": [
+    "CWE-252"
+  ],
+  "configurations": [
+    {
+      "nodes": [
+        {
+          "cpe_match": [
+            {
+              "criteria": "cpe:2.3:a:gnu:glibc:*:*:*:*:*:*:*:*",
+              "match_criteria_id": "3BD603A8-4AD5-4805-AC8F-EB1F5FA9CD87",
+              "version_end_excluding": "2.2",
+              "version_end_including": "",
+              "version_start_excluding": "",
+              "version_start_including": "",
+              "vulnerable": true
+            }
+          ],
+          "negate": false,
+          "operator": "OR"
+        }
+      ],
+      "operator": ""
+    }
+  ],
+  "last_modified_at": "2024-11-20T23:28:06Z",
+  "published_at": "2020-10-06T13:15:13Z"
+}
