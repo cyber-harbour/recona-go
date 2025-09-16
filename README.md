@@ -146,14 +146,10 @@ Account:
 Target info:
 - [IP details](./examples/ip_details/main.go)
 - [Domain details](./examples/domain_details/main.go)
-- [Domain batch_search](./examples/domain_batch/main.go)
 
 Search with params (up to 10 000 results):
-- [Subdomains lookup](./examples/domain_subdomains/main.go)
-- [Search domains by technology](./examples/domains_with_technology/main.go)
-- [Search emails by domain name](./examples/emails_search/main.go)
+- [Subdomains lookup](./examples/domain_subdomain_batch/main.go)
 - [Search IPv4 hosts with specific open port](./examples/ips_with_open_port/main.go)
-- [Search IPv4 hosts by geolocation](./examples/ips_by_country/main.go)
 
 ### Running Examples
 
