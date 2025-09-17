@@ -24,6 +24,10 @@ const (
 
 func MakeAuthenticatedRequest(
 	ctx context.Context, client *http.Client, method, url, token string, body interface{}) (*http.Response, error) {
+	if client == nil {
+		return nil, fmt.Errorf("request failed, http client is empty")
+	}
+
 	var reqBody io.Reader
 
 	if body != nil {

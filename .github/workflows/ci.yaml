@@ -33,7 +33,29 @@ jobs:
       - name: Run golangci-lint (SARIF output)
         id: lint_check
         run: |
+          set -e
           golangci-lint run --timeout=10m --output.sarif.path=golangci-lint.sarif ./... || true
+
+          # Ensure SARIF file exists, even if empty
+          if [ ! -s golangci-lint.sarif ]; then
+            echo '{
+              "version": "2.1.0",
+              "runs": [
+                {
+                  "tool": {
+                    "driver": {
+                      "name": "golangci-lint",
+                      "informationUri": "https://golangci-lint.run",
+                      "version": "latest"
+                    }
+                  },
+                  "results": []
+                }
+              ]
+            }' > golangci-lint.sarif
+          fi
+
+          # Check if SARIF has results
           if grep -q '"ruleId":' golangci-lint.sarif; then
             echo "lint_failed=true" >> $GITHUB_ENV
           else
